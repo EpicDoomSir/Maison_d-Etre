@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
 
   get "/sessions/new", to: "sessions#new", as: "new_login"
-  delete "/sessions/logout", to: "sessions#destroy", as: 
+  post "/sessions/create", to: "sessions#create", as: "login"
+  delete "/sessions/logout", to: "sessions#logout", as: "logout"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
