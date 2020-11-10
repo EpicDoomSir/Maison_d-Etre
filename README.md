@@ -1,6 +1,6 @@
 # README
 
-1. set up home page - user route - root path
+<!-- 1. set up home page - user route - root path -->
 2. authentication - login, logout, create user
 3. start game route - level route - hallway/corridor
 4. entering room - room route
