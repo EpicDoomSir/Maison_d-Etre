@@ -95,7 +95,24 @@ quill = Item.create(name: "Quill", image_path: "/app/assets/images/map_room/feat
 magnifying_glass = Item.create(name: "Magnifying Glass", image_path: "/app/assets/images/map_room/png-transparent-magnifying-glass-loupe-magnifier-magnifying-glass-glass-lens-sticker (1).png", room_id: map_room.id, description: "")
 world_map = Item.create(name: "World Map", image_path: "/app/assets/images/map_room/Retro-World-Map-Vector-on-old-paper.png", room_id: map_room.id, description: "")
 
+chameleon = Item.create(name: "Chameleon", image_path: "/app/assets/images/menagerie/3.png", room_id: menagerie.id, description: "")
+alligator = Item.create(name: "Alligator", image_path: "/app/assets/images/menagerie/4.png", room_id: menagerie.id, description: "")
+bearded_dragon = Item.create(name: "Bearded Dragon", image_path: "/app/assets/images/menagerie/5.png", room_id: menagerie.id, description: "")
+salamander = Item.create(name: "Salamander", image_path: "/app/assets/images/menagerie/6.png", room_id: menagerie.id, description: "")
+gecko = Item.create(name: "Gecko", image_path: "/app/assets/images/menagerie/7.png", room_id: menagerie.id, description: "")
+newt = Item.create(name: "Newt", image_path: "/app/assets/images/menagerie/9.png", room_id: menagerie.id, description: "")
+tortoise = Item.create(name: "Tortoise", image_path: "/app/assets/images/menagerie/10.png", room_id: menagerie.id, description: "")
+lizard = Item.create(name: "Lizard", image_path: "/app/assets/images/menagerie/12.png", room_id: menagerie.id, description: "")
+frog = Item.create(name: "Frog", image_path: "/app/assets/images/menagerie/14.png", room_id: menagerie.id, description: "")
+rattlesnake = Item.create(name: "Rattlesnake", image_path: "/app/assets/images/menagerie/16.png", room_id: menagerie.id, description: "")
 
+moon = Item.create(name: "Moon", image_path: "/app/assets/images/observatory/1.png", room_id: observatory.id, description: "")
+satellite = Item.create(name: "Satellite", image_path: "/app/assets/images/observatory/2.png", room_id: observatory.id, description: "")
+stars = Item.create(name: "Stars", image_path: "/app/assets/images/observatory/1.png", room_id: observatory.id, description: "")
+sun = Item.create(name: "Sun", image_path: "/app/assets/images/observatory/4.png", room_id: observatory.id, description: "")
+rocket = Item.create(name: "Rocket", image_path: "/app/assets/images/observatory/5.png", room_id: observatory.id, description: "")
+comet = Item.create(name: "Comet", image_path: "/app/assets/images/observatory/6.png", room_id: observatory.id, description: "")
+telescope = Item.create(name: "Telescope", image_path: "/app/assets/images/observatory/7.png", room_id: observatory.id, description: "")
 
 
 10.times do |x|
