@@ -33,8 +33,12 @@ class SessionsController < ApplicationController
     Level.all.each do |level|
       randomize_items(level)
     end
+    
+    redirect_to hallway_path
+  end
+
+  def hallway
     @level = Level.first
-    render :hallway
   end
 
   private

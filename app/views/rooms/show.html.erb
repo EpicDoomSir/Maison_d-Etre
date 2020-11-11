@@ -1,0 +1,4 @@
+<% @room.room_items.each do |room_item| %>
+    <%= link_to room_item.item.name, room_item_path(room_item) %><br>
+<% end %>
+<%= link_to 'Back to Hallway', hallway_path %>

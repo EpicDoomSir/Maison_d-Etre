@@ -11,6 +11,5 @@ Rails.application.routes.draw do
   delete "/sessions/logout", to: "sessions#logout", as: "logout"
   
   get "/sessions/new_game", to: "sessions#new_game", as: "new_game"
-  
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/sessions/hallway", to: "sessions#hallway", as: "hallway"
 end

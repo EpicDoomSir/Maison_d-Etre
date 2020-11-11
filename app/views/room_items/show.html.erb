@@ -1,0 +1,6 @@
+<%= @room_item.item.name %><br>
+<%= @room_item.room.name %><br>
+
+<%= link_to "move item to another room", edit_room_item_path(@room_item) %>
+
+<%= link_to "back to #{@room_item.room.name}", room_path(@room_item.room) %>

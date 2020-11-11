@@ -1,0 +1,6 @@
+<%= form_for @room_item do |f| %>
+    <%= f.label "Move to room:" %>
+    <%= f.collection_select :room_id, @level.rooms, :id, :name %>
+
+    <%= f.submit "Move" %>
+<% end %>
