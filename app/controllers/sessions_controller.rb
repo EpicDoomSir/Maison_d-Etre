@@ -34,11 +34,22 @@ class SessionsController < ApplicationController
       randomize_items(level)
     end
     
-    redirect_to hallway_path
+    redirect_to hallway_one_path
   end
 
-  def hallway
+  def hallway_one
     @level = Level.first
+    render :hallway
+  end
+  
+  def hallway_two
+    @level = Level.second
+    render :hallway
+  end
+
+  def hallway_three
+    @level = Level.third
+    render :hallway
   end
 
   private

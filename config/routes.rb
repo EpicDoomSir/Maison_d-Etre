@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   delete "/sessions/logout", to: "sessions#logout", as: "logout"
   
   get "/sessions/new_game", to: "sessions#new_game", as: "new_game"
-  get "/sessions/hallway", to: "sessions#hallway", as: "hallway"
+  get "/sessions/hallway_one", to: "sessions#hallway_one", as: "hallway_one"
+  get "/sessions/hallway_two", to: "sessions#hallway_two", as: "hallway_two"
+  get "/sessions/hallway_three", to: "sessions#hallway_three", as: "hallway_three"
 end

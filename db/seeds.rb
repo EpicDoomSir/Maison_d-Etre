@@ -123,24 +123,24 @@ second = Level.create(name: "Second Floor")
 third = Level.create(name: "Third Floor")
 
 
-medium_rooms = [map_room, gymnasium, observatory, greenhouse]
-hard_rooms = [kitchen, classroom, menagerie, aviary]
+# medium_rooms = [map_room, gymnasium, observatory, greenhouse]
+# hard_rooms = [kitchen, classroom, menagerie, aviary]
 
 # what logic to incorporate for unique rooms here?
 # write logic to accurately divide rooms between levels
 
 
-LevelRoom.create(level_id: first.id, room_id: boiler.id)
-LevelRoom.create(level_id: first.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
-LevelRoom.create(level_id: first.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
+# LevelRoom.create(level_id: first.id, room_id: boiler.id)
+# LevelRoom.create(level_id: first.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
+# LevelRoom.create(level_id: first.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
 
-LevelRoom.create(level_id: second.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
-LevelRoom.create(level_id: second.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
-LevelRoom.create(level_id: second.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
+# LevelRoom.create(level_id: second.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
+# LevelRoom.create(level_id: second.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
+# LevelRoom.create(level_id: second.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
 
-LevelRoom.create(level_id: third.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
-LevelRoom.create(level_id: third.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
-LevelRoom.create(level_id: third.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
+# LevelRoom.create(level_id: third.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
+# LevelRoom.create(level_id: third.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
+# LevelRoom.create(level_id: third.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
 
 # LevelRoom.where(level_id: 9).each{|x| x.room.items.each{|y| puts y.name}}
 

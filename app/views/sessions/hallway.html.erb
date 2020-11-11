@@ -1,4 +1,14 @@
 
+
 <% @level.rooms.each do |room| %>
     <%= link_to room.name, room_path(room) %>
 <% end %>
+
+<% if @level == Level.first %>
+    <%= link_to 'Move Up a Floor', hallway_two_path %>
+<% elsif @level == Level.second %>
+    <%= link_to 'Move Down a Floor', hallway_one_path %>
+    <%= link_to 'Move Up a Floor', hallway_three_path %>
+<% else%>
+    <%= link_to 'Move Down a Floor', hallway_two_path %>
+<% end%>
