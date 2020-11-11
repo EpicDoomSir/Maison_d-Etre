@@ -4,6 +4,7 @@
     <%= link_to 'Login', new_login_path %>
 <% else %>
     <p>Insert menu! :)</p>
+    <%= link_to "Start New Game", new_game_path %>
     <%= link_to 'Logout', logout_path, method: :delete %>
 <% end%>
 

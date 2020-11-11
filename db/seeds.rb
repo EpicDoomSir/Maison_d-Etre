@@ -25,15 +25,15 @@ LevelRoom.destroy_all
 # music path left blank for now
 # still need background pic for gymnasium & menagerie
 
-aviary = Room.create(name: "Aviary", artwork_path: "/app/assets/images/aviary/after_photo_tropical_rainforest_photo_by_jim_cunningham_photography.jpg")
-boiler = Room.create(name: "Boiler Room", artwork_path: "/app/assets/images/boiler_room/Boiler_Room_2.png", music_path: "")
-classroom = Room.create(name: "Classroom", artwork_path: "/app/assets/images/classroom/incom-studio-3d-classroom.jpg" , music_path: "")
-greenhouse = Room.create(name: "Greenhouse", artwork_path: "/app/assets/images/greenhouse/Screen Shot 2020-11-10 at 9.43.56 PM.png", music_path: "")
-gymnasium = Room.create(name: "Gymnasium", artwork_path: "", music_path: "")
-kitchen = Room.create(name: "Kitchen", artwork_path: "/app/assets/images/kitchen/306e66e43eeff7753bba179db03b353e.jpg", music_path: "")
-map_room = Room.create(name: "Map Room", artwork_path: "/app/assets/images/map_room/91ca60cf2e32baf0d460568c9a48005b.jpg", music_path: "")
-menagerie = Room.create(name: "Menagerie", artwork_path: "", music_path: "")
-observatory = Room.create(name: "Observatory", artwork_path: "/app/assets/images/observatory/875ccbc2818239008a0946a47adb1e2a.jpg", music_path: "")
+aviary = Room.create(name: "Aviary", artwork_path: "/app/assets/images/aviary/after_photo_tropical_rainforest_photo_by_jim_cunningham_photography.jpg", music_path: '3')
+boiler = Room.create(name: "Boiler Room", artwork_path: "/app/assets/images/boiler_room/Boiler_Room_2.png", music_path: '1')
+classroom = Room.create(name: "Classroom", artwork_path: "/app/assets/images/classroom/incom-studio-3d-classroom.jpg" , music_path: '3')
+greenhouse = Room.create(name: "Greenhouse", artwork_path: "/app/assets/images/greenhouse/Screen Shot 2020-11-10 at 9.43.56 PM.png", music_path: '2')
+gymnasium = Room.create(name: "Gymnasium", artwork_path: "", music_path: '2')
+kitchen = Room.create(name: "Kitchen", artwork_path: "/app/assets/images/kitchen/306e66e43eeff7753bba179db03b353e.jpg", music_path: '3')
+map_room = Room.create(name: "Map Room", artwork_path: "/app/assets/images/map_room/91ca60cf2e32baf0d460568c9a48005b.jpg", music_path: '2')
+menagerie = Room.create(name: "Menagerie", artwork_path: "", music_path: '3')
+observatory = Room.create(name: "Observatory", artwork_path: "/app/assets/images/observatory/875ccbc2818239008a0946a47adb1e2a.jpg", music_path: '2')
 
 
 
@@ -123,18 +123,25 @@ first = Level.create(name: "First Floor")
 second = Level.create(name: "Second Floor")
 third = Level.create(name: "Third Floor")
 
+
+medium_rooms = [map_room, gymnasium, observatory, greenhouse]
+hard_rooms = [kitchen, classroom, menagerie, aviary]
+
 # what logic to incorporate for unique rooms here?
+# write logic to accurately divide rooms between levels
+
+
 LevelRoom.create(level_id: first.id, room_id: boiler.id)
-LevelRoom.create(level_id: first.id, room_id: map_room.id)
-LevelRoom.create(level_id: first.id, room_id: gymnasium.id)
+LevelRoom.create(level_id: first.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
+LevelRoom.create(level_id: first.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
 
-LevelRoom.create(level_id: second.id, room_id: observatory.id)
-LevelRoom.create(level_id: second.id, room_id: greenhouse.id)
-LevelRoom.create(level_id: second.id, room_id: kitchen.id)
+LevelRoom.create(level_id: second.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
+LevelRoom.create(level_id: second.id, room_id: medium_rooms.delete_at(rand(medium_rooms.count)).id)
+LevelRoom.create(level_id: second.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
 
-LevelRoom.create(level_id: third.id, room_id: classroom.id)
-LevelRoom.create(level_id: third.id, room_id: menagerie.id)
-LevelRoom.create(level_id: third.id, room_id: aviary.id)
+LevelRoom.create(level_id: third.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
+LevelRoom.create(level_id: third.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
+LevelRoom.create(level_id: third.id, room_id: hard_rooms.delete_at(rand(hard_rooms.count)).id)
 
 # LevelRoom.where(level_id: 9).each{|x| x.room.items.each{|y| puts y.name}}
 
