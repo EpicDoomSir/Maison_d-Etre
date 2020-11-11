@@ -36,7 +36,6 @@ menagerie = Room.create(name: "Menagerie", artwork_path: "", music_path: '3')
 observatory = Room.create(name: "Observatory", artwork_path: "/app/assets/images/observatory/875ccbc2818239008a0946a47adb1e2a.jpg", music_path: '2')
 
 
-
 # descriptions left blank for now
 
 macaw = Item.create(name: "Macaw", image_path: "/app/assets/images/aviary/2.png", room_id: aviary.id, description: "")
