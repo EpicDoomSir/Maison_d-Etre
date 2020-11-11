@@ -20,16 +20,17 @@ Item.destroy_all
 RoomItem.destroy_all
 
 # music path left blank for now
+# still need background pic for gymnasium & menagerie
 
 aviary = Room.create(name: "Aviary", artwork_path: "/app/assets/images/aviary/after_photo_tropical_rainforest_photo_by_jim_cunningham_photography.jpg")
-boiler = Room.create(name: "Boiler Room", artwork_path: , music_path: "")
-classroom = Room.create(name: "Classroom", artwork_path: , music_path: "")
-greenhouse = Room.create(name: "Greenhouse", artwork_path: , music_path: "")
+boiler = Room.create(name: "Boiler Room", artwork_path: "/app/assets/images/boiler_room/Boiler_Room_2.png", music_path: "")
+classroom = Room.create(name: "Classroom", artwork_path: "/app/assets/images/classroom/incom-studio-3d-classroom.jpg" , music_path: "")
+greenhouse = Room.create(name: "Greenhouse", artwork_path: "/app/assets/images/greenhouse/Screen Shot 2020-11-10 at 9.43.56 PM.png", music_path: "")
 gymnasium = Room.create(name: "Gymnasium", artwork_path: , music_path: "")
-kitchen = Room.create(name: "Kitchen", artwork_path: , music_path: "")
-map = Room.create(name: "Map Room", artwork_path: , music_path: "")
+kitchen = Room.create(name: "Kitchen", artwork_path: "/app/assets/images/kitchen/306e66e43eeff7753bba179db03b353e.jpg", music_path: "")
+map = Room.create(name: "Map Room", artwork_path: "/app/assets/images/map_room/91ca60cf2e32baf0d460568c9a48005b.jpg", music_path: "")
 menagerie = Room.create(name: "Menagerie", artwork_path: , music_path: "")
-observatory = Room.create(name: "Observatory", artwork_path: , music_path: "")
+observatory = Room.create(name: "Observatory", artwork_path: "/app/assets/images/observatory/875ccbc2818239008a0946a47adb1e2a.jpg", music_path: "")
 
 
 
