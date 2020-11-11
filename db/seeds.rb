@@ -28,7 +28,7 @@ classroom = Room.create(name: "Classroom", artwork_path: "/app/assets/images/cla
 greenhouse = Room.create(name: "Greenhouse", artwork_path: "/app/assets/images/greenhouse/Screen Shot 2020-11-10 at 9.43.56 PM.png", music_path: "")
 gymnasium = Room.create(name: "Gymnasium", artwork_path: , music_path: "")
 kitchen = Room.create(name: "Kitchen", artwork_path: "/app/assets/images/kitchen/306e66e43eeff7753bba179db03b353e.jpg", music_path: "")
-map = Room.create(name: "Map Room", artwork_path: "/app/assets/images/map_room/91ca60cf2e32baf0d460568c9a48005b.jpg", music_path: "")
+map_room = Room.create(name: "Map Room", artwork_path: "/app/assets/images/map_room/91ca60cf2e32baf0d460568c9a48005b.jpg", music_path: "")
 menagerie = Room.create(name: "Menagerie", artwork_path: , music_path: "")
 observatory = Room.create(name: "Observatory", artwork_path: "/app/assets/images/observatory/875ccbc2818239008a0946a47adb1e2a.jpg", music_path: "")
 
@@ -88,6 +88,12 @@ oven_mitt = Item.create(name: "Oven Mitt", image_path: "/app/assets/images/kitch
 measuring_cup = Item.create(name: "Measuring Cup", image_path: "/app/assets/images/kitchen/14.png", room_id: kitchen.id, description: "")
 rolling_pin = Item.create(name: "Rolling Pin", image_path: "/app/assets/images/kitchen/15.png", room_id: kitchen.id, description: "")
 
+globe = Item.create(name: "Globe", image_path: "/app/assets/images/map_room/2.png", room_id: map_room.id, description: "")
+map = Item.create(name: "Map", image_path: "/app/assets/images/map_room/1.png", room_id: map_room.id, description: "")
+decanter = Item.create(name: "Decanter", image_path: "/app/assets/images/map_room/decanter.png", room_id: map_room.id, description: "")
+quill = Item.create(name: "Quill", image_path: "/app/assets/images/map_room/feather pen.png", room_id: map_room.id, description: "")
+magnifying_glass = Item.create(name: "Magnifying Glass", image_path: "/app/assets/images/map_room/png-transparent-magnifying-glass-loupe-magnifier-magnifying-glass-glass-lens-sticker (1).png", room_id: map_room.id, description: "")
+world_map = Item.create(name: "World Map", image_path: "/app/assets/images/map_room/Retro-World-Map-Vector-on-old-paper.png", room_id: map_room.id, description: "")
 
 
 
