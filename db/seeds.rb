@@ -143,6 +143,7 @@ LevelRoom.create(level_id: third.id, room_id: aviary.id)
 # end
 
 # logic to allocate correct ammount of items per room:
+# destroy all room_items
 # map all items onto array called unused
 # pick random using sample(n) to get desired ammount of items in room
 # remove used items from unused array to keep track of all items that have been used
