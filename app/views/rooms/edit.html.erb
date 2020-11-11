@@ -1,4 +1,4 @@
-<h1>Replace the <%= @room.room_items.order(:updated_at).last.item.name %></h1>
+<h1>Replace the <%= @item_name %></h1>
 
 <%= form_for :room_item, url: room_path(@room), method: :patch do |f| %>
 

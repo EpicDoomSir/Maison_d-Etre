@@ -8,6 +8,7 @@ class RoomsController < ApplicationController
     def edit
        @items = @room.room_items.map {|room_item| room_item.item }
        @previous_room = Room.find(session[:last_room_id])
+       @item_name = @room.room_items.order(:updated_at).last.item.name
     end
 
     def update
