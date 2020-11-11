@@ -18,6 +18,9 @@
 Room.destroy_all
 Item.destroy_all
 RoomItem.destroy_all
+Level.destroy_all
+LevelRoom.destroy_all
+
 
 # music path left blank for now
 # still need background pic for gymnasium & menagerie
@@ -133,6 +136,8 @@ LevelRoom.create(level_id: third.id, room_id: classroom.id)
 LevelRoom.create(level_id: third.id, room_id: menagerie.id)
 LevelRoom.create(level_id: third.id, room_id: aviary.id)
 
+# LevelRoom.where(level_id: 9).each{|x| x.room.items.each{|y| puts y.name}}
+
 # how many times should we call this?
 # 10.times do |x|
 #     RoomItem.create(room_id: Room.all.sample.id, item_id: Item.all.sample.id)
@@ -148,5 +153,10 @@ LevelRoom.create(level_id: third.id, room_id: aviary.id)
 # pick random using sample(n) to get desired ammount of items in room
 # remove used items from unused array to keep track of all items that have been used
 # varifying unused by checking if at the end .count == 0
+
+# two form proccess to switch items out
+# first form decides what room to send the item
+# second form loads the items of the chosen room and user is asked to pick one to take the place of the item removed
+# in the backend, the first item is moved as soon as form is submitted (room will not be rendered thus not needing to worry about wrong ammount of items to display)
 
 # No seed data necessary for UserLevels, right? Those will be generated once a user chooses to play a game.
