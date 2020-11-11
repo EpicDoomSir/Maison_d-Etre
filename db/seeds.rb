@@ -43,6 +43,23 @@ goldfinch = Item.create(name: "Goldfinch", image_path: "/app/assets/images/aviar
 ibis = Item.create(name: "Ibis", image_path: "/app/assets/images/aviary/13.png", room_id: aviary.id, description: "")
 cockatoo = Item.create(name: "Cockatoo", image_path: "/app/assets/images/aviary/11.png", room_id: aviary.id, description: "")
 
+bp_monitor = Item.create(name: "Blood Pressure Monitor", image_path: "/app/assets/images/boiler_room/blood-pressure-meter-illustration-drawing-engraving-ink-line-art-vector-illustration-what-made-ink-pencil-then-was-113427728.png", room_id: boiler.id, description: "")
+fan = Item.create(name: "Fan", image_path: "/app/assets/images/boiler_room/unnamed.png", room_id: boiler.id, description: "")
+water_pump = Item.create(name: "Mechanical Water Pump", image_path: "/app/assets/images/boiler_room/water-pump-icon-vector-icon-of-electric-water-pump-or-submerge-water-pump-eps-vector_csp48560849.png", room_id: boiler.id, description: "")
+
+backpack = Item.create(name: "Backpack", image_path: "/app/assets/images/classroom/2.png", room_id: classroom.id, description: "")
+apple = Item.create(name: "Apple", image_path: "/app/assets/images/classroom/3.png", room_id: classroom.id, description: "")
+scissors = Item.create(name: "Scissors", image_path: "/app/assets/images/classroom/4.png", room_id: classroom.id, description: "")
+stapler = Item.create(name: "Stapler", image_path: "/app/assets/images/classroom/5.png", room_id: classroom.id, description: "")
+crayons = Item.create(name: "Crayons", image_path: "/app/assets/images/classroom/6.png", room_id: classroom.id, description: "")
+lamp = Item.create(name: "lamp", image_path: "/app/assets/images/classroom/7.png", room_id: classroom.id, description: "")
+laptop = Item.create(name: "Laptop", image_path: "/app/assets/images/classroom/8.png", room_id: classroom.id, description: "")
+books = Item.create(name: "Books", image_path: "/app/assets/images/classroom/11.png", room_id: classroom.id, description: "")
+lunchbox = Item.create(name: "Lunchbox", image_path: "/app/assets/images/classroom/10.png", room_id: classroom.id, description: "")
+pencils = Item.create(name: "Pencils", image_path: "/app/assets/images/classroom/14.png", room_id: classroom.id, description: "")
+
+
+
 
 
 10.times do |x|
