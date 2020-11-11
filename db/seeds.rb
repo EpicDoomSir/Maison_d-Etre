@@ -19,6 +19,8 @@ Room.destroy_all
 Item.destroy_all
 RoomItem.destroy_all
 
+# music path left blank for now
+
 aviary = Room.create(name: "Aviary", artwork_path: "/app/assets/images/aviary/after_photo_tropical_rainforest_photo_by_jim_cunningham_photography.jpg")
 boiler = Room.create(name: "Boiler Room", artwork_path: , music_path: "")
 classroom = Room.create(name: "Classroom", artwork_path: , music_path: "")
@@ -31,7 +33,8 @@ observatory = Room.create(name: "Observatory", artwork_path: , music_path: "")
 
 
 
-# descriptions blank for now
+# descriptions left blank for now
+
 macaw = Item.create(name: "Macaw", image_path: "/app/assets/images/aviary/2.png", room_id: aviary.id, description: "")
 sharp_beak = Item.create(name: "Sharp Beak Bird", image_path: "/app/assets/images/aviary/3.png", room_id: aviary.id, description: "")
 cardinal = Item.create(name: "Cardinal", image_path: "/app/assets/images/aviary/4.png", room_id: aviary.id, description: "")
@@ -73,7 +76,16 @@ barbell = Item.create(name: "Barbell", image_path: "/app/assets/images/gymnasium
 yoga_mat = Item.create(name: "Yoga Mat", image_path: "/app/assets/images/gymnasium/5.png", room_id: gymnasium.id, description: "")
 dumbbell = Item.create(name: "Dumbbell", image_path: "/app/assets/images/gymnasium/6.png", room_id: gymnasium.id, description: "")
 
-barbell = Item.create(name: "Barbell", image_path: "/app/assets/images/gymnasium/4.png", room_id: gymnasium.id, description: "")
+spatula = Item.create(name: "Spatula", image_path: "/app/assets/images/kitchen/2.png", room_id: kitchen.id, description: "")
+collander = Item.create(name: "Collander", image_path: "/app/assets/images/kitchen/4.png", room_id: kitchen.id, description: "")
+pot = Item.create(name: "Pot", image_path: "/app/assets/images/kitchen/5.png", room_id: kitchen.id, description: "")
+ladle = Item.create(name: "Ladle", image_path: "/app/assets/images/kitchen/6.png", room_id: kitchen.id, description: "")
+knife = Item.create(name: "Knife", image_path: "/app/assets/images/kitchen/7.png", room_id: kitchen.id, description: "")
+grater = Item.create(name: "Grater", image_path: "/app/assets/images/kitchen/9.png", room_id: kitchen.id, description: "")
+pan = Item.create(name: "Pan", image_path: "/app/assets/images/kitchen/11.png", room_id: kitchen.id, description: "")
+oven_mitt = Item.create(name: "Oven Mitt", image_path: "/app/assets/images/kitchen/12.png", room_id: kitchen.id, description: "")
+measuring_cup = Item.create(name: "Measuring Cup", image_path: "/app/assets/images/kitchen/14.png", room_id: kitchen.id, description: "")
+rolling_pin = Item.create(name: "Rolling Pin", image_path: "/app/assets/images/kitchen/15.png", room_id: kitchen.id, description: "")
 
 
 
