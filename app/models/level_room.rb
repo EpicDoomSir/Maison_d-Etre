@@ -1,4 +1,4 @@
 class LevelRoom < ApplicationRecord
-    belong_to :level
-    belong_to :room
+    belongs_to :level
+    belongs_to :room
 end

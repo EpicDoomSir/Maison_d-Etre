@@ -18,6 +18,9 @@
 Room.destroy_all
 Item.destroy_all
 RoomItem.destroy_all
+Level.destroy_all
+LevelRoom.destroy_all
+
 
 # music path left blank for now
 # still need background pic for gymnasium & menagerie
@@ -26,10 +29,10 @@ aviary = Room.create(name: "Aviary", artwork_path: "/app/assets/images/aviary/af
 boiler = Room.create(name: "Boiler Room", artwork_path: "/app/assets/images/boiler_room/Boiler_Room_2.png", music_path: "")
 classroom = Room.create(name: "Classroom", artwork_path: "/app/assets/images/classroom/incom-studio-3d-classroom.jpg" , music_path: "")
 greenhouse = Room.create(name: "Greenhouse", artwork_path: "/app/assets/images/greenhouse/Screen Shot 2020-11-10 at 9.43.56 PM.png", music_path: "")
-gymnasium = Room.create(name: "Gymnasium", artwork_path: , music_path: "")
+gymnasium = Room.create(name: "Gymnasium", artwork_path: "", music_path: "")
 kitchen = Room.create(name: "Kitchen", artwork_path: "/app/assets/images/kitchen/306e66e43eeff7753bba179db03b353e.jpg", music_path: "")
 map_room = Room.create(name: "Map Room", artwork_path: "/app/assets/images/map_room/91ca60cf2e32baf0d460568c9a48005b.jpg", music_path: "")
-menagerie = Room.create(name: "Menagerie", artwork_path: , music_path: "")
+menagerie = Room.create(name: "Menagerie", artwork_path: "", music_path: "")
 observatory = Room.create(name: "Observatory", artwork_path: "/app/assets/images/observatory/875ccbc2818239008a0946a47adb1e2a.jpg", music_path: "")
 
 
@@ -113,10 +116,6 @@ rocket = Item.create(name: "Rocket", image_path: "/app/assets/images/observatory
 comet = Item.create(name: "Comet", image_path: "/app/assets/images/observatory/6.png", room_id: observatory.id, description: "")
 telescope = Item.create(name: "Telescope", image_path: "/app/assets/images/observatory/7.png", room_id: observatory.id, description: "")
 
-# how many times should we call this? and we need to make sure our items are only getting dispersed once per each 
-10.times do |x|
-    RoomItem.create(room_id: Room.all.sample.id, item_id: Item.all.sample.id)
-end
 
 # creating Levels
 first = Level.create(name: "First Floor")
@@ -124,17 +123,39 @@ second = Level.create(name: "Second Floor")
 third = Level.create(name: "Third Floor")
 
 # what logic to incorporate for unique rooms here?
-LevelRoom.create(level_id: first.id, room_id: )
-LevelRoom.create(level_id: first.id, room_id: )
-LevelRoom.create(level_id: first.id, room_id: )
+LevelRoom.create(level_id: first.id, room_id: boiler.id)
+LevelRoom.create(level_id: first.id, room_id: map_room.id)
+LevelRoom.create(level_id: first.id, room_id: gymnasium.id)
 
-LevelRoom.create(level_id: second.id, room_id: )
-LevelRoom.create(level_id: second.id, room_id: )
-LevelRoom.create(level_id: second.id, room_id: )
+LevelRoom.create(level_id: second.id, room_id: observatory.id)
+LevelRoom.create(level_id: second.id, room_id: greenhouse.id)
+LevelRoom.create(level_id: second.id, room_id: kitchen.id)
 
-LevelRoom.create(level_id: third.id, room_id: )
-LevelRoom.create(level_id: third.id, room_id: )
-LevelRoom.create(level_id: third.id, room_id: )
+LevelRoom.create(level_id: third.id, room_id: classroom.id)
+LevelRoom.create(level_id: third.id, room_id: menagerie.id)
+LevelRoom.create(level_id: third.id, room_id: aviary.id)
 
+# LevelRoom.where(level_id: 9).each{|x| x.room.items.each{|y| puts y.name}}
+
+# how many times should we call this?
+# 10.times do |x|
+#     RoomItem.create(room_id: Room.all.sample.id, item_id: Item.all.sample.id)
+# end
+
+# Item.all.count.times do |x|
+#     RoomItem.create(room_id: Room.all.sample.id, item_id: Item.find_by(id: x + 1).id)
+# end
+
+# logic to allocate correct ammount of items per room:
+# destroy all room_items
+# map all items onto array called unused
+# pick random using sample(n) to get desired ammount of items in room
+# remove used items from unused array to keep track of all items that have been used
+# varifying unused by checking if at the end .count == 0
+
+# two form proccess to switch items out
+# first form decides what room to send the item
+# second form loads the items of the chosen room and user is asked to pick one to take the place of the item removed
+# in the backend, the first item is moved as soon as form is submitted (room will not be rendered thus not needing to worry about wrong ammount of items to display)
 
 # No seed data necessary for UserLevels, right? Those will be generated once a user chooses to play a game.
