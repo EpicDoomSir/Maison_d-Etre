@@ -114,7 +114,27 @@ rocket = Item.create(name: "Rocket", image_path: "/app/assets/images/observatory
 comet = Item.create(name: "Comet", image_path: "/app/assets/images/observatory/6.png", room_id: observatory.id, description: "")
 telescope = Item.create(name: "Telescope", image_path: "/app/assets/images/observatory/7.png", room_id: observatory.id, description: "")
 
-
+# how many times should we call this?
 10.times do |x|
     RoomItem.create(room_id: Room.all.sample.id, item_id: Item.all.sample.id)
 end
+
+# creating Levels
+first = Level.create(name: "First Floor")
+second = Level.create(name: "Second Floor")
+third = Level.create(name: "Third Floor")
+
+# what logic to incorporate for unique rooms here?
+LevelRoom.create(level_id: first.id, room_id: )
+LevelRoom.create(level_id: first.id, room_id: )
+LevelRoom.create(level_id: first.id, room_id: )
+
+LevelRoom.create(level_id: second.id, room_id: )
+LevelRoom.create(level_id: second.id, room_id: )
+LevelRoom.create(level_id: second.id, room_id: )
+
+LevelRoom.create(level_id: third.id, room_id: )
+LevelRoom.create(level_id: third.id, room_id: )
+LevelRoom.create(level_id: third.id, room_id: )
+
+
