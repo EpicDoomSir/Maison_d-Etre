@@ -138,3 +138,4 @@ LevelRoom.create(level_id: third.id, room_id: )
 LevelRoom.create(level_id: third.id, room_id: )
 
 
+# No seed data necessary for UserLevels, right? Those will be generated once a user chooses to play a game.
