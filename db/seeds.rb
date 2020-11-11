@@ -58,6 +58,23 @@ books = Item.create(name: "Books", image_path: "/app/assets/images/classroom/11.
 lunchbox = Item.create(name: "Lunchbox", image_path: "/app/assets/images/classroom/10.png", room_id: classroom.id, description: "")
 pencils = Item.create(name: "Pencils", image_path: "/app/assets/images/classroom/14.png", room_id: classroom.id, description: "")
 
+watering_can = Item.create(name: "Watering Can", image_path: "/app/assets/images/greenhouse/1.png", room_id: greenhouse.id, description: "")
+gloves = Item.create(name: "Gloves", image_path: "/app/assets/images/greenhouse/2.png", room_id: greenhouse.id, description: "")
+trowel = Item.create(name: "Trowel", image_path: "/app/assets/images/greenhouse/3.png", room_id: greenhouse.id, description: "")
+soil = Item.create(name: "Soil", image_path: "/app/assets/images/greenhouse/4.png", room_id: greenhouse.id, description: "")
+seedlings = Item.create(name: "Seedlings", image_path: "/app/assets/images/greenhouse/5.png", room_id: greenhouse.id, description: "")
+hose = Item.create(name: "Hose", image_path: "/app/assets/images/greenhouse/6.png", room_id: greenhouse.id, description: "")
+wheelbarrow = Item.create(name: "Wheelbarrow", image_path: "/app/assets/images/greenhouse/7.png", room_id: greenhouse.id, description: "")
+
+weight_plate = Item.create(name: "Weight Plate", image_path: "/app/assets/images/gymnasium/1.png", room_id: gymnasium.id, description: "")
+kettlebell = Item.create(name: "Kettlebell ", image_path: "/app/assets/images/gymnasium/2.png", room_id: gymnasium.id, description: "")
+jump_rope = Item.create(name: "Jump Rope", image_path: "/app/assets/images/gymnasium/3  .png", room_id: gymnasium.id, description: "")
+barbell = Item.create(name: "Barbell", image_path: "/app/assets/images/gymnasium/4.png", room_id: gymnasium.id, description: "")
+yoga_mat = Item.create(name: "Yoga Mat", image_path: "/app/assets/images/gymnasium/5.png", room_id: gymnasium.id, description: "")
+dumbbell = Item.create(name: "Dumbbell", image_path: "/app/assets/images/gymnasium/6.png", room_id: gymnasium.id, description: "")
+
+barbell = Item.create(name: "Barbell", image_path: "/app/assets/images/gymnasium/4.png", room_id: gymnasium.id, description: "")
+
 
 
 
