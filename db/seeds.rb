@@ -114,10 +114,6 @@ rocket = Item.create(name: "Rocket", image_path: "/app/assets/images/observatory
 comet = Item.create(name: "Comet", image_path: "/app/assets/images/observatory/6.png", room_id: observatory.id, description: "")
 telescope = Item.create(name: "Telescope", image_path: "/app/assets/images/observatory/7.png", room_id: observatory.id, description: "")
 
-# how many times should we call this?
-10.times do |x|
-    RoomItem.create(room_id: Room.all.sample.id, item_id: Item.all.sample.id)
-end
 
 # creating Levels
 first = Level.create(name: "First Floor")
@@ -125,17 +121,31 @@ second = Level.create(name: "Second Floor")
 third = Level.create(name: "Third Floor")
 
 # what logic to incorporate for unique rooms here?
-LevelRoom.create(level_id: first.id, room_id: )
-LevelRoom.create(level_id: first.id, room_id: )
-LevelRoom.create(level_id: first.id, room_id: )
+LevelRoom.create(level_id: first.id, room_id: boiler.id)
+LevelRoom.create(level_id: first.id, room_id: map_room.id)
+LevelRoom.create(level_id: first.id, room_id: gymnasium.id)
 
-LevelRoom.create(level_id: second.id, room_id: )
-LevelRoom.create(level_id: second.id, room_id: )
-LevelRoom.create(level_id: second.id, room_id: )
+LevelRoom.create(level_id: second.id, room_id: observatory.id)
+LevelRoom.create(level_id: second.id, room_id: greenhouse.id)
+LevelRoom.create(level_id: second.id, room_id: kitchen.id)
 
-LevelRoom.create(level_id: third.id, room_id: )
-LevelRoom.create(level_id: third.id, room_id: )
-LevelRoom.create(level_id: third.id, room_id: )
+LevelRoom.create(level_id: third.id, room_id: classroom.id)
+LevelRoom.create(level_id: third.id, room_id: menagerie.id)
+LevelRoom.create(level_id: third.id, room_id: aviary.id)
 
+# how many times should we call this?
+# 10.times do |x|
+#     RoomItem.create(room_id: Room.all.sample.id, item_id: Item.all.sample.id)
+# end
+
+# Item.all.count.times do |x|
+#     RoomItem.create(room_id: Room.all.sample.id, item_id: Item.find_by(id: x + 1).id)
+# end
+
+# logic to allocate correct ammount of items per room:
+# map all items onto array called unused
+# pick random using sample(n) to get desired ammount of items in room
+# remove used items from unused array to keep track of all items that have been used
+# varifying unused by checking if at the end .count == 0
 
 # No seed data necessary for UserLevels, right? Those will be generated once a user chooses to play a game.
