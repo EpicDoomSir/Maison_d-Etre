@@ -33,7 +33,6 @@ menagerie = Room.create(name: "Menagerie", artwork_path: , music_path: "")
 observatory = Room.create(name: "Observatory", artwork_path: "/app/assets/images/observatory/875ccbc2818239008a0946a47adb1e2a.jpg", music_path: "")
 
 
-
 # descriptions left blank for now
 
 macaw = Item.create(name: "Macaw", image_path: "/app/assets/images/aviary/2.png", room_id: aviary.id, description: "")
@@ -114,7 +113,7 @@ rocket = Item.create(name: "Rocket", image_path: "/app/assets/images/observatory
 comet = Item.create(name: "Comet", image_path: "/app/assets/images/observatory/6.png", room_id: observatory.id, description: "")
 telescope = Item.create(name: "Telescope", image_path: "/app/assets/images/observatory/7.png", room_id: observatory.id, description: "")
 
-# how many times should we call this?
+# how many times should we call this? and we need to make sure our items are only getting dispersed once per each 
 10.times do |x|
     RoomItem.create(room_id: Room.all.sample.id, item_id: Item.all.sample.id)
 end
