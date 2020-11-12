@@ -1,6 +1,9 @@
-<%= @room_item.item.name %><br>
-<%= @room_item.room.name %><br>
+<div class="container">
+<p>You are currently in the <%= @room_item.room.name %> and the item you are examining is a <%= @room_item.item.name %>.<br></p>
 
-<%= link_to "move item to another room", edit_room_item_path(@room_item) %>
+<%= image_tag "/assets/#{@room_item.item.image_path}", class: "image-show"%>
+
+<%= link_to "move item to a different room", edit_room_item_path(@room_item) %>
 
 <%= link_to "back to #{@room_item.room.name}", room_path(@room_item.room) %>
+</div>

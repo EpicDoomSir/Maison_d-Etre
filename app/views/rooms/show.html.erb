@@ -11,7 +11,7 @@
 
 
 <% @room.room_items.each do |room_item| %>
-    <%= link_to image_tag("/assets/#{room_item.item.image_path}"), room_item_path(room_item)%>
+    <%= link_to image_tag("/assets/#{room_item.item.image_path}", class: "item-image"), room_item_path(room_item)%>
 <% end %>
 
 <% if @level == Level.first %>
