@@ -110,7 +110,7 @@ rattlesnake = Item.create(name: "Rattlesnake", image_path: "menagerie/16.png", r
 
 moon = Item.create(name: "Moon", image_path: "observatory/1.png", room_id: observatory.id, description: "")
 satellite = Item.create(name: "Satellite", image_path: "observatory/2.png", room_id: observatory.id, description: "")
-stars = Item.create(name: "Stars", image_path: "observatory/1.png", room_id: observatory.id, description: "")
+stars = Item.create(name: "Stars", image_path: "observatory/3.png", room_id: observatory.id, description: "")
 sun = Item.create(name: "Sun", image_path: "observatory/4.png", room_id: observatory.id, description: "")
 rocket = Item.create(name: "Rocket", image_path: "observatory/5.png", room_id: observatory.id, description: "")
 comet = Item.create(name: "Comet", image_path: "observatory/6.png", room_id: observatory.id, description: "")

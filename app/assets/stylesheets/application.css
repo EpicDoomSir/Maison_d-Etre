@@ -22,6 +22,8 @@
      align-items: flex-start;
  }
 
+ 
+
  .link-container {
     display: flex;
     flex-direction: row;
@@ -78,9 +80,38 @@ a:active {
 
 .login-form-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    height: 50%;
+    height: 100%;
     align-items: flex-start;
 }
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.form-field {
+    border-bottom:1px dashed #989895;
+    border-right:none;
+    border-left:none;
+    border-top:none;
+}
+
+.floor-title {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: flex-start;
+}
+
+
 

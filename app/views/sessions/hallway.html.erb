@@ -1,20 +1,48 @@
-<% if @level == Level.first %>
-    <h3>First Floor</h3>
-<% elsif @level == Level.second %>
-    <h3>Second Floor</h3>
-<% else%>
-    <h3>Third Floor</h3>
-<% end%>
-
-<% @level.rooms.each do |room| %>
-    <%= link_to room.name, room_path(room) %>
+<%= content_for :head do %>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+            
+        }
+    </style>
 <% end %>
 
-<% if @level == Level.first %>
-    <%= link_to 'Move Up a Floor', hallway_two_path %>
-<% elsif @level == Level.second %>
-    <%= link_to 'Move Down a Floor', hallway_one_path %>
-    <%= link_to 'Move Up a Floor', hallway_three_path %>
-<% else%>
-    <%= link_to 'Move Down a Floor', hallway_two_path %>
-<% end%>
+<div class="img-fill" style="background-image: url('/assets/hallway/w9JKNMjyTP-doors-1767564_1280-1024x546.png'); background-size: 80%; background-position: center; background-repeat: no-repeat; cover; height: 100%">
+
+
+
+
+
+<div class="title-container">
+   <div class="floor-title"> <% if @level == Level.first %>
+        <h3>First Floor</h3>
+    </div>
+    
+    <div class="floor-title"> <% elsif @level == Level.second %>
+        <h3>Second Floor</h3>
+    </div>
+        
+    <div class="floor-title"> 
+    <% else%>
+        <h3>Third Floor</h3>
+    </div>
+    <% end%>
+</div>
+
+<div class="title-container">
+    <% @level.rooms.each do |room| %>
+        <%= link_to room.name, room_path(room) %>
+    <% end %>
+</div>
+
+<div class="title-container">
+    <% if @level == Level.first %>
+        <%= link_to 'Move Up a Floor', hallway_two_path %>
+    <% elsif @level == Level.second %>
+        <%= link_to 'Move Down a Floor', hallway_one_path %>
+        <%= link_to 'Move Up a Floor', hallway_three_path %>
+    <% else%>
+        <%= link_to 'Move Down a Floor', hallway_two_path %>
+    <% end%>
+</div>
