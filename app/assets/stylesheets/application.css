@@ -63,7 +63,6 @@
 
  * {
      font-family: cursive;
-     font-size: medium;
  }
 
  a:link {
@@ -135,4 +134,48 @@ body {
 
 .item-image {
     width: 5%;
+}
+
+.hallway {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.full-hallway {
+    background-image: url('/assets/hallway/w9JKNMjyTP-doors-1767564_1280-1024x546.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100%; 
+    
+}
+
+.rooms-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: auto;
+    font-size: 20px;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+.floor-container {
+    text-align: center;
+    padding-top: 3px;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.move {
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 15px;
 }

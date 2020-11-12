@@ -3,9 +3,11 @@
     <h1>Moving: <%= @room_item.item.name %></h1>
 
     <%= form_for @room_item do |f| %>
-        <%= f.label "Move to room:" %><br>
+        <%= f.label "To room:" %><br>
         <%= f.collection_select :room_id, @level.rooms, :id, :name %><br><br>
 
-        <%= f.submit "Move" %>
+        <%= f.submit "Move" %><br><br>
     <% end %>
+
+    <%= link_to "Back to #{@room_item.room.name}", room_path(@room_item.room) %>
 </div>

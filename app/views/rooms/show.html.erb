@@ -7,8 +7,7 @@
     </style>
 <% end %>
 
-<div class="img-fill" style="background-image: url('/assets/<%= @room.artwork_path %>'); background-size: 80%; background-position: center; background-repeat: no-repeat; cover; height: 100%">
-
+<div class="img-fill" style="background-image: url('/assets/<%= @room.artwork_path %>'); background-size: cover; background-position: center; background-repeat: no-repeat; cover; height: 100%">
 
 <% @room.room_items.each do |room_item| %>
     <%= link_to image_tag("/assets/#{room_item.item.image_path}", class: "item-image"), room_item_path(room_item)%>
@@ -21,4 +20,3 @@
 <% else%>
     <%= link_to 'Back to Hallway', hallway_three_path %>
 <% end%>
-</div>
