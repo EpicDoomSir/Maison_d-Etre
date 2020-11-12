@@ -1,14 +1,20 @@
-
+<% if @level == Level.first %>
+    <h3>You are on the First Floor</h3>
+<% elsif @level == Level.second %>
+    <h3>You are on the Second Floor</h3>
+<% else%>
+    <h3>You are on the Third Floor</h3>
+<% end%>
 
 <% @level.rooms.each do |room| %>
-    <%= link_to room.name, room_path(room) %>
+    <%= link_to room.name, room_path(room), class: "button btn btn-warning"%><br><br>
 <% end %>
 
 <% if @level == Level.first %>
-    <%= link_to 'Move Up a Floor', hallway_two_path %>
+    <%= link_to 'Move Up a Floor ⬆️', hallway_two_path %>
 <% elsif @level == Level.second %>
-    <%= link_to 'Move Down a Floor', hallway_one_path %>
-    <%= link_to 'Move Up a Floor', hallway_three_path %>
+    <%= link_to 'Move Down a Floor ⬇️', hallway_one_path %><br>
+    <%= link_to 'Move Up a Floor ⬆️', hallway_three_path %>
 <% else%>
-    <%= link_to 'Move Down a Floor', hallway_two_path %>
+    <%= link_to 'Move Down a Floor ⬇️', hallway_two_path %>
 <% end%>

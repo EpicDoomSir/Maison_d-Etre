@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ .container {
+    margin: 5px auto;
+    max-width: 87%;
+    background-color: rgba(253, 97, 90, 0.2);
+    padding: 10px;
+    border-radius: 25px;
+    height: 100%;
+    }
+
+ body {
+     color: pink;
+     font-family: Georgia, 'Times New Roman', Times, serif
+ }

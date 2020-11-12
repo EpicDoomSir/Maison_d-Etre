@@ -25,15 +25,15 @@ LevelRoom.destroy_all
 # music path left blank for now
 # still need background pic for gymnasium & menagerie
 
-aviary = Room.create(name: "Aviary", artwork_path: "/app/assets/images/aviary/after_photo_tropical_rainforest_photo_by_jim_cunningham_photography.jpg", difficulty: 3, max_items: 10)
-boiler = Room.create(name: "Boiler Room", artwork_path: "/app/assets/images/boiler_room/Boiler_Room_2.png", difficulty: 1, max_items: 3)
-classroom = Room.create(name: "Classroom", artwork_path: "/app/assets/images/classroom/incom-studio-3d-classroom.jpg" , difficulty: 3, max_items: 10)
-greenhouse = Room.create(name: "Greenhouse", artwork_path: "/app/assets/images/greenhouse/Screen Shot 2020-11-10 at 9.43.56 PM.png", difficulty: 2, max_items: 7)
+aviary = Room.create(name: "Aviary", artwork_path: "aviary/after_photo_tropical_rainforest_photo_by_jim_cunningham_photography.jpg", difficulty: 3, max_items: 10)
+boiler = Room.create(name: "Boiler Room", artwork_path: "boiler_room/Boiler_Room_2.png", difficulty: 1, max_items: 3)
+classroom = Room.create(name: "Classroom", artwork_path: "classroom/incom-studio-3d-classroom.jpg" , difficulty: 3, max_items: 10)
+greenhouse = Room.create(name: "Greenhouse", artwork_path: "greenhouse/Screen Shot 2020-11-10 at 9.43.56 PM.png", difficulty: 2, max_items: 7)
 gymnasium = Room.create(name: "Gymnasium", artwork_path: "", difficulty: 2, max_items: 6)
-kitchen = Room.create(name: "Kitchen", artwork_path: "/app/assets/images/kitchen/306e66e43eeff7753bba179db03b353e.jpg", difficulty: 3, max_items: 10)
-map_room = Room.create(name: "Map Room", artwork_path: "/app/assets/images/map_room/91ca60cf2e32baf0d460568c9a48005b.jpg", difficulty: 2, max_items: 6)
+kitchen = Room.create(name: "Kitchen", artwork_path: "kitchen/306e66e43eeff7753bba179db03b353e.jpg", difficulty: 3, max_items: 10)
+map_room = Room.create(name: "Map Room", artwork_path: "map_room/91ca60cf2e32baf0d460568c9a48005b.jpg", difficulty: 2, max_items: 6)
 menagerie = Room.create(name: "Menagerie", artwork_path: "", difficulty: 3, max_items: 10)
-observatory = Room.create(name: "Observatory", artwork_path: "/app/assets/images/observatory/875ccbc2818239008a0946a47adb1e2a.jpg", difficulty: 2, max_items: 7)
+observatory = Room.create(name: "Observatory", artwork_path: "observatory/875ccbc2818239008a0946a47adb1e2a.jpg", difficulty: 2, max_items: 7)
 
 
 # descriptions left blank for now
