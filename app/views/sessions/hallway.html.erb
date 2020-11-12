@@ -1,4 +1,10 @@
-
+<% if @level == Level.first %>
+    <h3>You are on the First Floor</h3>
+<% elsif @level == Level.second %>
+    <h3>You are on the Second Floor</h3>
+<% else%>
+    <h3>You are on the Third Floor</h3>
+<% end%>
 
 <% @level.rooms.each do |room| %>
     <%= link_to room.name, room_path(room) %>
