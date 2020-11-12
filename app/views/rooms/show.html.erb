@@ -1,4 +1,14 @@
-<h1>You're in the <%= @room.name %></h1>
+<%= content_for :head do %>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+        }
+    </style>
+<% end %>
+
+<div class="img-fill" style="background-image: url('/assets/<%= @room.artwork_path %>'); background-size: cover; height: 100%">
+
 
 
 <% @room.room_items.each do |room_item| %>
@@ -12,3 +22,4 @@
 <% else%>
     <%= link_to 'Back to Hallway', hallway_three_path %>
 <% end%>
+</div>
