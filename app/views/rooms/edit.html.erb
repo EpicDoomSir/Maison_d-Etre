@@ -1,10 +1,13 @@
-<h1>Replace the <%= @item_name %></h1>
 
-<%= form_for :room_item, url: room_path(@room), method: :patch do |f| %>
+<div class="center">
+    <h1>Replace the <%= @item_name %></h1>
 
-<%= f.label "Choose Item to Replace it" %>
-<%= f.collection_select :item_id, @items, :id, :name %>
-<%= f.hidden_field :room_id, value: session[:last_room_id] %>
-<%= f.submit "Send to #{@previous_room.name}"%>
+    <%= form_for :room_item, url: room_path(@room), method: :patch do |f| %>
 
-<% end%>
+    <%= f.label "Choose Item to Replace it" %>
+    <%= f.collection_select :item_id, @items, :id, :name %>
+    <%= f.hidden_field :room_id, value: session[:last_room_id] %><br><br>
+    <%= f.submit "Send to #{@previous_room.name}"%>
+
+    <% end%>
+<div>

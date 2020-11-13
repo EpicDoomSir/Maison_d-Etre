@@ -1,5 +1,17 @@
+<%= content_for :head do %>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+        }
+    </style>
+<% end %>
 
-<div class="center">
-    <h3>Login</h3>
-    <%= render 'form' %>
+<div class="login-bg">
+    <div class="center">
+        <h3>Login</h3>
+        <%= render 'form' %>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <%= link_to 'Back to the Maison', homepage_path %>
+    </div>
 </div>

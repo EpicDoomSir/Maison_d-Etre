@@ -1,9 +1,9 @@
 
-<div class="center">
+<div class="container">
     <h1>Moving: <%= @room_item.item.name %></h1>
 
     <%= form_for @room_item do |f| %>
-        <%= f.label "To room:" %><br>
+        <%= f.label "Move to room:" %><br>
         <%= f.collection_select :room_id, @level.rooms, :id, :name %><br><br>
 
         <%= f.submit "Move" %><br><br>
