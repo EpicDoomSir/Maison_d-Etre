@@ -11,5 +11,6 @@
 <!-- 10. logic for finishing and loading next level -->
 <!-- 11. make three floors - 3 rooms each -->
 <!-- 12. items only randomized between rooms on floor -->
-8. "win condition" - put all the items back
+8. "win condition" - put all the items back ---> we can have it be a "meditative experience" with no winning option
 9. users/new page background? && vertically center form on the page?
+10. I couldn't figure out a good way to get the items to appear in the rooms. The best I got was the vertical but I think it looks stupid :(
