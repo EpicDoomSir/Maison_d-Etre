@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
  
  * {
      font-family: cursive;
@@ -188,15 +192,12 @@ h3 {
 
 /* -----------------------------styling for room & items---------------------------------------- */
 .room-grid {
-    padding-top: 50%;
+    
     text-align: center;
-    padding-bottom: 40px;
 }
 
 .item-on-grid {
-    padding: 40px;
-    display: inline;
-    padding-bottom: 30px;
+    float: ;
 }
 /* ------------------------------------------------------------------------------------------------ */
 
