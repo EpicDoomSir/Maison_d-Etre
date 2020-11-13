@@ -7,13 +7,13 @@
     </style>
 <% end %>
 
-    <div class="img-fill" style="background-image: url('/assets/<%= @room.artwork_path %>'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%;">
+    <div class="img-fill container" style="background-image: url('/assets/<%= @room.artwork_path %>');">
 
-<div class="room-grid">
+<div class="room-grid row">
 
         <% @room.room_items.each do |room_item| %>
-    <div class="item-on-grid">
-            <%= link_to image_tag("/assets/#{room_item.item.image_path}", class: "item-image"), room_item_path(room_item)%>
+    <div class="item-on-grid col">
+            <%= link_to image_tag(room_item.item.image_path, class: "item-image"), room_item_path(room_item)%>
     </div>
         <% end %>
 

@@ -22,6 +22,10 @@
      font-family: cursive;
  }
 
+ .container {
+     max-width: 100%;
+ }
+
  .title-container {
      display: flex;
      flex-direction: row;
@@ -30,11 +34,20 @@
      align-items: flex-start;
  }
 
+ .img-fill {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100%; 
+    margin: 0;
+    width: 100%;
+ }
+
  .link-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 50%;
+    height: 10%;
     align-items: flex-start;
 }
 
@@ -47,8 +60,10 @@
 } 
 
  .subtitle {
+     margin-top: 50px;
     font-size: 15px;
     text-align: center;
+    background-color: white;
  }
 
  .container {
@@ -63,6 +78,7 @@
      margin: 10px;
      padding: 10px;
      align-items: flex-end;
+     background-color: white;
  }
 
  .link a {
@@ -148,7 +164,7 @@ h3 {
 /* -------------------------------controlling item size---------------------- */
 
 .item-image {
-    width: 5%;
+    width: 70px;
 }
 /* --------------------------------------------------------------------------- */
 
@@ -166,6 +182,7 @@ h3 {
     font-size: 20px;
     margin-right: 35px;
     margin-left: 35px;
+    margin-top: 5%;
 }
 
 .full-hallway {
@@ -193,11 +210,16 @@ h3 {
 /* -----------------------------styling for room & items---------------------------------------- */
 .room-grid {
     
-    text-align: center;
+    /* align-items: center;
+    flex-direction: row;
+    text-align: center; */
+
 }
 
 .item-on-grid {
-    float: ;
+    width: 70px;
+    flex-direction: row;
+    margin: 0;
 }
 
 .back-button {
