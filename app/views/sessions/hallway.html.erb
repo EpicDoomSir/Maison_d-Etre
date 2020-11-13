@@ -8,40 +8,46 @@
 <% end %>
 
 
-<div class="full-hallway">
-
-    <div class="floor-container">
-        <% if @level == Level.first %>
-            <h3>First Floor</h3>
-        <% elsif @level == Level.second %>
-            <h3>Second Floor</h3>
-        <% else%>
-            <h3>Third Floor</h3>
-        <% end%>
+<% if session[:complete_levels] >= 3 %>
+    <div class="endgame">
+        <h3>Congratulations! You've put the house back in order!</h3>
+        <%= link_to "Homepage", homepage_path %>
     </div>
+<% else %>
+    <div class="full-hallway">
 
-    <div class="move">
-        <% if @level == Level.first %>
-            <%= link_to 'Move Up a Floor', hallway_two_path %>
-        <% elsif @level == Level.second %>
-            <%= link_to 'Move Down a Floor', hallway_one_path %> || 
-            <%= link_to 'Move Up a Floor', hallway_three_path %>
-        <% else%>
-            <%= link_to 'Move Down a Floor', hallway_two_path %>
-        <% end%><br><br><br><br><br><br><br>
-    </div>
+        <div class="floor-container">
+            <% if @level == Level.first %>
+                <h3>First Floor</h3>
+            <% elsif @level == Level.second %>
+                <h3>Second Floor</h3>
+            <% else%>
+                <h3>Third Floor</h3>
+            <% end%>
+        </div>
 
-    <div class="rooms-container">
-        <% @level.rooms.each do |room| %>
-            <% if session[:room_status][room.id.to_s] %>
-                <p>The <%= room.name %> is Complete!</p>
-            <% else %>
-                <%= link_to room.name, room_path(room) %>
+        <div class="move">
+            <% if @level == Level.first %>
+                <%= link_to 'Move Up a Floor', hallway_two_path %>
+            <% elsif @level == Level.second %>
+                <%= link_to 'Move Down a Floor', hallway_one_path %> || 
+                <%= link_to 'Move Up a Floor', hallway_three_path %>
+            <% else%>
+                <%= link_to 'Move Down a Floor', hallway_two_path %>
+            <% end%><br><br><br><br><br><br><br>
+        </div>
+
+        <div class="rooms-container">
+            <% @level.rooms.each do |room| %>
+                <% if session[:room_status][room.id.to_s] || @complete_rooms.count >= 2 %>
+                    <p>The <%= room.name %> is Complete!</p>
+                <% else %>
+                    <%= link_to room.name, room_path(room) %>
+                <% end %>
             <% end %>
-        <% end %>
+        </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+            <p class="move"><%= link_to '~Log Out~', logout_path, method: :delete %></p>
+
     </div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-        <p class="move"><%= link_to '~Log Out~', logout_path, method: :delete %></p>
-
-
-</div>
+<% end %>

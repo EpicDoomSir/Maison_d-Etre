@@ -38,21 +38,50 @@ class SessionsController < ApplicationController
       session[:room_status][level_room.room_id] = false
     end
 
+    session[:complete_levels] = 0
+
     redirect_to hallway_one_path
   end
 
   def hallway_one
     @level = Level.first
+    @complete_rooms = []
+    @level.rooms.each do |room|
+      if session[:room_status][room.id.to_s]
+        @complete_rooms << room
+        if @complete_rooms.count >= 2
+          session[:complete_levels] += 1
+        end
+      end
+    end
     render :hallway
   end
   
   def hallway_two
     @level = Level.second
+    @complete_rooms = []
+    @level.rooms.each do |room|
+      if session[:room_status][room.id.to_s]
+        @complete_rooms << room
+        if @complete_rooms.count >= 2
+          session[:complete_levels] += 1
+        end
+      end
+    end
     render :hallway
   end
 
   def hallway_three
     @level = Level.third
+    @complete_rooms = []
+    @level.rooms.each do |room|
+      if session[:room_status][room.id.to_s]
+        @complete_rooms << room
+        if @complete_rooms.count >= 2
+          session[:complete_levels] += 1
+        end
+      end
+    end
     render :hallway
   end
 
