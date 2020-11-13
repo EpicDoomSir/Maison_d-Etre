@@ -17,3 +17,5 @@
 11. need to check if all items in room (room_items) match the id in their corresponding items
 12. function should be part of the submition of the replacement item
 13. add styling + logic to announce that the room is complete
+14. add hallway checker to see if all rooms are complete
+15. if all rooms are complete - kick them out of the house :p
