@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
   root to: "sessions#index", as: "homepage"
-  resources :room_items
-  resources :items
-  resources :rooms
-  resources :levels
-  resources :users
+  resources :room_items, only: [:show, :edit, :update]
+  resources :rooms, only: [:show, :edit, :update]
+  resources :users, only: [:new, :create]
 
   get "/sessions/new", to: "sessions#new", as: "new_login"
   post "/sessions/create", to: "sessions#create", as: "login"

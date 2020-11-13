@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<div class="center">
-<h1>Replace the <%= @item_name %></h1>
-=======
->>>>>>> 56289187d5ca296f91c93fa65d12f5608c35ca54
 
 <div class="center">
     <h1>Replace the <%= @item_name %></h1>
 
-<<<<<<< HEAD
-<%= f.label "Choose Item to Replace it" %>
-<%= f.collection_select :item_id, @items, :id, :name %>
-<%= f.hidden_field :room_id, value: session[:last_room_id] %><br>
-<%= f.submit "Send to #{@previous_room.name}"%>
-
-<% end%>
-</div>
-=======
     <%= form_for :room_item, url: room_path(@room), method: :patch do |f| %>
 
     <%= f.label "Choose Item to Replace it" %>
@@ -25,4 +11,3 @@
 
     <% end%>
 <div>
->>>>>>> 56289187d5ca296f91c93fa65d12f5608c35ca54
