@@ -33,7 +33,11 @@ class SessionsController < ApplicationController
     Level.all.each do |level|
       randomize_items(level)
     end
-    
+    session[:room_status] = {}
+    LevelRoom.all.each do |level_room|
+      session[:room_status][level_room.room_id] = false
+    end
+
     redirect_to hallway_one_path
   end
 

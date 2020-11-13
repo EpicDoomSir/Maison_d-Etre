@@ -33,7 +33,11 @@
 
     <div class="rooms-container">
         <% @level.rooms.each do |room| %>
-            <%= link_to room.name, room_path(room) %>
+            <% if session[:room_status][room.id.to_s] %>
+                <p>The <%= room.name %> is Complete!</p>
+            <% else %>
+                <%= link_to room.name, room_path(room) %>
+            <% end %>
         <% end %>
     </div>
 <br><br><br><br><br><br><br><br><br><br><br><br>

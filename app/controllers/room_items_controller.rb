@@ -6,7 +6,13 @@ class RoomItemsController < ApplicationController
     end
 
     def edit
-        @level = LevelRoom.find_by(room_id: @room_item.room.id).level
+        # @level = LevelRoom.find_by(room_id: @room_item.room.id).level
+        @level = []
+        LevelRoom.find_by(room_id: @room_item.room.id).level.rooms.each do |room|
+            if !session[:room_status][room.id.to_s]
+                @level << room
+            end
+        end
     end
 
     def update
