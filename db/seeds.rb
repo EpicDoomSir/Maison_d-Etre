@@ -74,7 +74,7 @@ wheelbarrow = Item.create(name: "Wheelbarrow", image_path: "greenhouse/7.png", r
 
 weight_plate = Item.create(name: "Weight Plate", image_path: "gymnasium/1.png", room_id: gymnasium.id, description: "")
 kettlebell = Item.create(name: "Kettlebell ", image_path: "gymnasium/2.png", room_id: gymnasium.id, description: "")
-jump_rope = Item.create(name: "Jump Rope", image_path: "gymnasium/3  .png", room_id: gymnasium.id, description: "")
+jump_rope = Item.create(name: "Jump Rope", image_path: "gymnasium/3.png", room_id: gymnasium.id, description: "")
 barbell = Item.create(name: "Barbell", image_path: "gymnasium/4.png", room_id: gymnasium.id, description: "")
 yoga_mat = Item.create(name: "Yoga Mat", image_path: "gymnasium/5.png", room_id: gymnasium.id, description: "")
 dumbbell = Item.create(name: "Dumbbell", image_path: "gymnasium/6.png", room_id: gymnasium.id, description: "")

@@ -179,3 +179,14 @@ body {
 h3 {
     margin-bottom: 15px;
 }
+
+.room-grid {
+    padding-top: 50%;
+    text-align: center;
+}
+
+.item-on-grid {
+    padding: 40px;
+    display: inline
+}
+
