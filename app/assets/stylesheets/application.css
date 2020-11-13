@@ -247,6 +247,14 @@ h3 {
 }
 /* --------------------------------------------------------------------------- */
 
+.login-bg {
+    background-image: url('/assets/index/MANSION_HABS_WEB.jpg'); 
+    background-size: 80%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100%;   
+}
+
 
 /* .hallway {
     display: grid;
