@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ 
+ * {
+     font-family: cursive;
+ }
 
  .title-container {
      display: flex;
@@ -22,25 +26,25 @@
      align-items: flex-start;
  }
 
- 
-
  .link-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     height: 50%;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
- .title {
-    margin-top: 45px;
-    padding: 10px;
+.title {
+    text-align: center;
     font-size: 42px;
-    display: flex;
-    align-items: flex-start;
-    align-items: center;
-    text-shadow: 1px 1px ;
-    color: #706d6d;
+    color: grey;
+    padding-top: 40px;
+    font-family: fantasy;
+} 
+
+ .subtitle {
+    font-size: 15px;
+    text-align: center;
  }
 
  .container {
@@ -61,9 +65,6 @@
      font-size: 24px;
  }
 
- * {
-     font-family: cursive;
- }
 
  a:link {
      text-decoration: none;
@@ -79,6 +80,8 @@
 a:hover {
     text-decoration: none;
     color: rgb(66, 65, 65);
+    font-family: fantasy;
+    transition: 2s;
 }
 
 a:active {
@@ -120,39 +123,35 @@ a:active {
     align-items: flex-start;
 }
 
+/* -----------------------------controls img on the move item page--------------------------- */
+
 .image-show {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
 }
+/* ------------------------------------------------------------------------------------------- */
 
 body {
     height: 100%;
     margin: 10px;
 }
 
+h3 {
+    margin-bottom: 15px;
+}
+/* -------------------------------controlling item size---------------------- */
+
 .item-image {
     width: 5%;
 }
+/* --------------------------------------------------------------------------- */
 
-.hallway {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
 
-.full-hallway {
-    background-image: url('/assets/hallway/w9JKNMjyTP-doors-1767564_1280-1024x546.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    height: 100%; 
-    
-}
 
+
+/* -------------------------------controlling hallway---------------------- */
 .rooms-container {
     display: flex;
     flex-direction: row;
@@ -165,6 +164,16 @@ body {
     margin-left: 35px;
 }
 
+.full-hallway {
+    background-image: url('/assets/hallway/w9JKNMjyTP-doors-1767564_1280-1024x546.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100%;   
+}
+/* --------------------------------------------------------------------------- */
+
+
 .floor-container {
     text-align: center;
     padding-top: 3px;
@@ -176,17 +185,42 @@ body {
     text-align: center;
 }
 
-h3 {
-    margin-bottom: 15px;
-}
 
+/* -----------------------------styling for room & items---------------------------------------- */
 .room-grid {
     padding-top: 50%;
     text-align: center;
+    padding-bottom: 40px;
 }
 
 .item-on-grid {
     padding: 40px;
-    display: inline
+    display: inline;
+    padding-bottom: 30px;
+}
+/* ------------------------------------------------------------------------------------------------ */
+
+.center {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }
 
+/* --------------------------error message--------------------------------------- */
+
+.error {
+    text-align: center;
+    color: goldenrod;
+    font-weight: bold;
+}
+/* --------------------------------------------------------------------------- */
+
+
+/* .hallway {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+} */

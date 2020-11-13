@@ -7,7 +7,7 @@
     </style>
 <% end %>
 
-    <div class="img-fill" style="background-image: url('/assets/<%= @room.artwork_path %>'); background-size: cover; background-position: center; background-repeat: no-repeat; cover; height: 100%">
+    <div class="img-fill" style="background-image: url('/assets/<%= @room.artwork_path %>'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 70%, position: absolute;">
 
 <div class="room-grid">
 
@@ -17,6 +17,8 @@
     </div>
         <% end %>
 
+</div>
+
         <% if @level == Level.first %>
             <%= link_to 'Back to Hallway', hallway_one_path %>
         <% elsif @level == Level.second %>
@@ -24,5 +26,3 @@
         <% else%>
             <%= link_to 'Back to Hallway', hallway_three_path %>
         <% end%>
-
-</div>

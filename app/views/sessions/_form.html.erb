@@ -1,13 +1,19 @@
-<% if flash[:error] %>
-    <p><%= flash[:error] %></p>
-<% end %>
+<div class="error">
+    <% if flash[:error] %>
+        <p><%= flash[:error] %></p>
+    <% end %>
+</div>
 
-<%= form_for :session, url: login_path do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+    <div class="login-form-container">
 
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+            <%= form_for :session, url: login_path do |f| %>
+                <%= f.label :username %>
+                <%= f.text_field :username %><br><br>
 
-    <%= f.submit "Login" %>
-<% end %>
+                <%= f.label :password %>
+                <%= f.password_field :password %><br><br>
+
+                <%= f.submit "Enter" %>
+            <% end %>
+
+    </div>

@@ -10,8 +10,10 @@
 <div class="img-fill" style="background-image: url('/assets/index/MANSION_HABS_WEB.jpg'); background-size: 80%; background-position: center; background-repeat: no-repeat; cover; height: 100%">
 
 <div class="title-container">
-  <div class="title">Maison d'Être</div>
+  <div class="title">Maison d'Être<br> </div>
 </div>
+<br><br><br><br><br><br><br><br><br><br><br>
+  <div class="subtitle">The items in this house have become hopelessly jumbled by a naughty poltergeist. Can you set the rooms straight again? </div>
 
   <div class="link-container">
     <div class="link">
@@ -21,6 +23,8 @@
             <%= link_to "Start New Game", new_game_path %>
         <% end%>
     </div>
+
+
     <div class="link">
         <% if !@current_user%>
           <%= link_to 'Login', new_login_path %>

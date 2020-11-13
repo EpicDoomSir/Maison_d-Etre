@@ -7,8 +7,9 @@
 <!-- 5. populating room with items -->
 <!-- 6. item show page (does not tell you correct room) - link to form to change room of item (room_item) -->
 <!-- 7. back button on all paths -->
-8. "win condition" - put all the items back
-9. timer
+<!-- 9. timer -->
 <!-- 10. logic for finishing and loading next level -->
 <!-- 11. make three floors - 3 rooms each -->
 <!-- 12. items only randomized between rooms on floor -->
+8. "win condition" - put all the items back
+9. users/new page background? && vertically center form on the page?
